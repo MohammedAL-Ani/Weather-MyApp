@@ -1,4 +1,4 @@
-package com.example.my22.ui
+package com.example.my22.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

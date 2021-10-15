@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/redFragment"
-        android:name="com.example.my22.ui.RedFragment"
+        android:name="com.example.my22.ui.home.HomeFragment"
         android:label="fragment_red"
         tools:layout="@layout/fragment_red" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/blueFragment"
-        android:name="com.example.my22.ui.BlueFragment"
+        android:name="com.example.my22.ui.details.DetailsFragment"
         android:label="fragment_blue"
         tools:layout="@layout/fragment_blue" />
 </navigation>
