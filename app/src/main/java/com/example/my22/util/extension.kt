@@ -23,10 +23,11 @@ fun View.show(){
 }
 
 
-fun EditText.onClickSearch(action : (String) -> Unit){
+fun EditText.onClickSearch(action : (String) -> Unit) {
     this.setOnEditorActionListener { view, _, _ ->
-        if(view.text.isNotBlank()){
+        if (view.text.isNotBlank()) {
             action(view.text.toString())
         }
         return@setOnEditorActionListener false
     }
+}

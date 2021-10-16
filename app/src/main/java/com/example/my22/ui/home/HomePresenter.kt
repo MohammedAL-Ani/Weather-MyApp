@@ -9,17 +9,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 
-class HomePresenter(val view: IHomeViews):BasePresenter() {
+class HomePresenter():BasePresenter() {
 
-    fun getCityName(cityName:String){
-        customScope.launch {
-            Repository
-                .getWeatherResult(cityName)
-                .flowOn(Dispatchers.IO)
-                .catch { throwable->
-                    Log.i("SHOW_CITY_PRESENTER","${throwable.message}")
-                }.collect(view::onShowCityWeather)
-        }
-    }
+
 
 }

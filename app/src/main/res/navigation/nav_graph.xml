@@ -10,13 +10,22 @@
         android:name="com.example.my22.ui.home.HomeFragment"
         android:label="fragment_red"
         tools:layout="@layout/fragment_home" >
+
         <action
             android:id="@+id/action_redFragment_to_blueFragment"
             app:destination="@id/blueFragment" />
+        <argument
+            android:name="query"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/blueFragment"
         android:name="com.example.my22.ui.details.DetailsFragment"
         android:label="fragment_blue"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="query"
+            app:argType="string" />
+    </fragment>
+
 </navigation>

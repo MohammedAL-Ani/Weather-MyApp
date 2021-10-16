@@ -16,25 +16,31 @@ abstract  class BaseFragment<VB : ViewBinding,P : BasePresenter>:Fragment() {
     protected val binding
         get() = _binding as VB
 
-    private lateinit var _presenter: BasePresenter
+     lateinit var _presenter: BasePresenter
     protected val presenter
-        get() = _binding as P
+        get() = _presenter as P
+
 
     abstract val getPresenter :BasePresenter
     abstract val bindingInflater: (LayoutInflater) -> VB
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setUp()
+        setup()
         callbacks()
     }
+
+    abstract fun setup()
+    abstract fun callbacks()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ) : View?{
+        _presenter=getPresenter
         return bindingInflater(inflater).apply { _binding = this }.root
+
     }
 
     override fun onDestroy() {
@@ -42,6 +48,5 @@ abstract  class BaseFragment<VB : ViewBinding,P : BasePresenter>:Fragment() {
         _presenter.customScope.cancel()
     }
 
-    abstract fun setUp()
-    abstract fun callbacks()
+
 }
