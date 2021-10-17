@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/drawable/bg_home.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/drawable/bg_main.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/drawable/btn_show.xml" value="0.21388888888888888" />
         <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/drawable/ic_search.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/drawable/rounded.xml" value="0.21388888888888888" />
         <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/drawable/search_rounded.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/layout/activity_main.xml" value="0.11639492753623189" />
         <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/layout/fragment_blue.xml" value="0.11639492753623189" />
-        <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/layout/fragment_details.xml" value="0.18659420289855072" />
+        <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/layout/fragment_details.xml" value="0.25" />
         <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/layout/fragment_more_info.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mohammedmaher/AndroidStudioProjects/My22/app/src/main/res/layout/fragment_red.xml" value="0.11639492753623189" />
       </map>
     </option>
@@ -18,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.20416666666666666" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    tools:context=".ui.moreinfo.MoreInfoFragment">
+
+    <TextView
+        android:id="@+id/CityNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+        android:textSize="48sp"
+        android:transitionName="cityname"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CountryTv"
+        app:layout_constraintVertical_bias="0.094"
+        tools:text="City" />
+
+    <TextView
+        android:id="@+id/latTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#4f4f4f "
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/CityNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/CityNameTv"
+        tools:text="lat" />
+
+    <TextView
+        android:id="@+id/lonTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#4f4f4f "
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/CityNameTv"
+        app:layout_constraintStart_toEndOf="@+id/latTv"
+        app:layout_constraintTop_toBottomOf="@+id/CityNameTv"
+        tools:text="lon" />
+
+    <TextView
+        android:id="@+id/CountryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Iraq" />
+
+    <TextView
+        android:id="@+id/SunriseTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Sunrise"
+        android:textColor="#DAF7A6 "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/SunsetTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/SunsetTv" />
+
+    <TextView
+        android:id="@+id/SunriseShowTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+        android:textSize="18sp"
+        android:paddingTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/SunsetSohwTv"
+        app:layout_constraintTop_toBottomOf="@+id/SunriseTv"
+        tools:text="Sunrise" />
+
+    <TextView
+        android:id="@+id/SunsetTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Sunset"
+        android:textColor="#DAF7A6 "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/typeTv"
+        app:layout_constraintEnd_toStartOf="@+id/SunriseTv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/typeTv" />
+
+    <TextView
+        android:id="@+id/SunsetSohwTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+        android:textSize="18sp"
+        android:paddingTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/SunriseShowTv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/typeshowTv"
+        app:layout_constraintTop_toBottomOf="@+id/SunsetTv"
+        tools:text="Sunset" />
+
+    <TextView
+        android:id="@+id/typeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Type"
+        android:textColor="#DAF7A6 "
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/SunsetTv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lonTv" />
+
+    <TextView
+        android:id="@+id/typeshowTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+        android:paddingTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/SunsetSohwTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeTv"
+        tools:text="type" />
+
+
+    <TextView
+        android:id="@+id/humidityTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Humidity"
+        android:textColor="#DAF7A6 "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pressureTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pressureTv" />
+
+    <TextView
+        android:id="@+id/humidityShowTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+        android:textSize="18sp"
+        android:paddingTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pressureSohwTv"
+        app:layout_constraintTop_toBottomOf="@+id/humidityTv"
+        tools:text="humidity" />
+
+    <TextView
+        android:id="@+id/pressureTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Pressure"
+        android:textColor="#DAF7A6 "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tempTv"
+        app:layout_constraintEnd_toStartOf="@+id/humidityTv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tempTv" />
+
+    <TextView
+        android:id="@+id/pressureSohwTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+        android:textSize="18sp"
+        android:paddingTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/humidityShowTv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tempshowTv"
+        app:layout_constraintTop_toBottomOf="@+id/pressureTv"
+        tools:text="pressure" />
+
+    <TextView
+        android:id="@+id/tempTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Temp"
+        android:textColor="#DAF7A6 "
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/pressureTv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SunriseTv" />
+
+    <TextView
+        android:id="@+id/tempshowTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#900C3F "
+        android:textSize="18sp"
+        android:paddingTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/pressureSohwTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempTv"
+        tools:text="temp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,12 +4,13 @@ import android.transition.TransitionInflater
 import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.navArgs
 
 import com.example.my22.databinding.FragmentDetailsBinding
 import com.example.my22.ui.base.BaseFragment
 import com.example.my22.ui.base.BasePresenter
-import com.example.weather_app.model.respone.Weather
+import com.example.my22.util.goToFragmentWithTransition
 import com.example.weather_app.model.respone.WeatherResponse
 import com.example.weather_app.util.Status
 
@@ -31,6 +32,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding,DetailsPresenter>(),
             binding.searchField1.setText(it)
             search(it)
         }
+        passToFragmentInfo()
     }
 
     override fun callbacks() {
@@ -65,8 +67,21 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding,DetailsPresenter>(),
     }
 
     private fun bindLayout(response: WeatherResponse) {
-        binding.ShowResult.text = response.weather?.joinToString { it.icon.toString() }
+        binding.iconTv.text = response.weather?.joinToString { it.icon.toString() }
+        binding.CaseWeatherTV.text = response.weather?.joinToString { it.description.toString() }
+        binding.CityNameTv.text = response.name
 
     }
+
+    private fun passToFragmentInfo(){
+        binding.CityNameTv.setOnClickListener {
+            it.goToFragmentWithTransition(
+                DetailsFragmentDirections.actionBlueFragmentToMoreInfoFragment(binding.CityNameTv.text as String),
+                FragmentNavigatorExtras(binding.CityNameTv to "cityname")
+            )
+        }
+    }
+
+
 
 }

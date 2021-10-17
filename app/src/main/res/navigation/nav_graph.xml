@@ -13,10 +13,12 @@
 
         <action
             android:id="@+id/action_redFragment_to_blueFragment"
-            app:destination="@id/blueFragment" />
-        <argument
-            android:name="query"
-            app:argType="string" />
+            app:destination="@id/blueFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
     </fragment>
     <fragment
         android:id="@+id/blueFragment"
@@ -25,6 +27,23 @@
         tools:layout="@layout/fragment_details" >
         <argument
             android:name="query"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_blueFragment_to_moreInfoFragment"
+            app:destination="@id/moreInfoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreInfoFragment"
+        android:name="com.example.my22.ui.moreinfo.MoreInfoFragment"
+        android:label="fragment_more_info"
+        tools:layout="@layout/fragment_more_info" >
+        <argument
+            android:name="querycity"
             app:argType="string" />
     </fragment>
 
